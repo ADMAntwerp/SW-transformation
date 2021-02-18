@@ -1,12 +1,12 @@
 # SW-transformation
-The SW-transformation is a fast classifier for binary node classification in bipartite graphs ([Stankova et al., 2015](
-https://hdl.handle.net/10067/1274850151162165141)). Bipartite graphs (or bigraphs), are defined by having two types of nodes such that edges only exist between nodes of the different type (see Fig. 1). 
+The SW-transformation is a fast classifier for binary node classification in bipartite graphs ([Stankova et al., 2020](
+https://link.springer.com/article/10.1007/s10994-020-05898-0)). Bipartite graphs (or bigraphs), are defined by having two types of nodes such that edges only exist between nodes of the different type (see Fig. 1). 
 
 ![title](https://github.com/SPraet/SW-transformation/blob/master/Bigraph.PNG)
 
-**Fig. 1: Bigraph, top node projection and bottom node projection (left), adjacency matrix representation of the bigraph (right)**  (Stankova et al., 2015, p. 8).
+**Fig. 1: Bigraph, top node projection and bottom node projection (left), adjacency matrix representation of the bigraph (right)**  (Stankova et al., 2020, p. 39).
 
-The SW-transformation combines the weighted-vote Relational Neighbor (wvRN) classifier with an aggregation function that sums the weights of the top nodes. The transformation optimally considers for each test instance only the weights of the neighboring top nodes multiplied by the number of training instances in that column which have a positive label (the positive neighbors of the node). The SW-transformation yields very fast run times and allows easy scaling of the method to big data sets of millions of nodes (Stankova et al., 2015).
+The SW-transformation combines the weighted-vote Relational Neighbor (wvRN) classifier with an aggregation function that sums the weights of the top nodes. The transformation optimally considers for each test instance only the weights of the neighboring top nodes multiplied by the number of training instances in that column which have a positive label (the positive neighbors of the node). The SW-transformation yields very fast run times and allows easy scaling of the method to big data sets of millions of nodes (Stankova et al., 2020).
 
 ## Installation
 Requirements: numpy
@@ -73,9 +73,11 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://gi
 
 
 ## Acknowledgements
-Based on the work of Marija Stankova, David Martens and Foster Provost
+Based on the work of Marija Stankova, Stiene Praet, David Martens and Foster Provost
 
 ## References
-Stankova, M., Martens, D., & Provost, F. (2015). Classification over bipartite graphs through projection. (Research paper / University of Antwerp. Faculty of Applied Economics ; 2015-001 D/2015/1169/001). Full text (open access): https://repository.uantwerpen.be/docman/irua/07acff/c5909d64.pdf
+Stankova, M., Praet, S., Martens, D., & Provost, F. (2020). Node classification over bipartite graphs through projection. *Machine Learning*, 110, 37–87. https://doi.org/10.1007/s10994-020-05898-0
+
+Working paper available at University of Antwerp. Faculty of Applied Economics; 2015-001 D/2015/1169/001. Full text (open access): https://repository.uantwerpen.be/docman/irua/07acff/c5909d64.pdf 
 
 
